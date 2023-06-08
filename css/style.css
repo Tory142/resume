@@ -9,7 +9,7 @@
     outline: none;
     border: none;
     scroll-behavior: smooth;
-    transition: .3s ease-in-out;
+    transition: all .1s;
 }
 
 ::-webkit-scrollbar {
@@ -29,6 +29,13 @@
     --brown: rgb(153, 83, 53);
     --second-bg-color: #323946;
     --text-color: #382020;
+    --white-color: #fff;
+}
+
+.dark-mode {
+    --text-color: rgb(255, 243, 238);
+    --bg-color: #382020;
+    --light-brown: rgb(226, 172, 148);
 }
 
 body {
@@ -73,6 +80,12 @@ a {
     padding: 2rem 0;
 }
 
+.header-inner {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+
 .logo {
     color: var(--text-color);
     font-weight: 600;
@@ -100,6 +113,11 @@ a {
     color: var(--text-color);
     cursor: pointer;
     display: none;
+}
+
+.toggle i {
+    font-size: 1.2rem;
+    cursor: pointer;
 }
 
 .home-inner {
@@ -440,6 +458,10 @@ label input:checked + .input__box-view .input__box-icon {
     
     #menu-icon {
         display: block;
+    }
+
+    .toggle i {
+        font-size: 1.7rem;
     }
 
     .header__container {

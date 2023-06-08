@@ -428,7 +428,7 @@ label input:checked + .input__box-view .input__box-icon {
     padding: .5rem;
     background: #fff;
     border-radius: .8rem;
-    transition: .5s ease;
+    transition: .4s ease;
 }
 
 .footer-iconTop a i {

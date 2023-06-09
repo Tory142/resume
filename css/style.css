@@ -36,6 +36,7 @@
     --text-color: rgb(255, 243, 238);
     --bg-color: #382020;
     --light-brown: rgb(226, 172, 148);
+    
 }
 
 body {
@@ -72,8 +73,7 @@ a {
 }
 
 .header__container {
-    max-width: 968px;
-    height: var(--header-height);
+    max-width: 970px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -194,14 +194,10 @@ a {
     gap: 4rem;
 }
 
-.about-img {
+.about-inner img {
     max-width: 400px;
-    height: auto;
-}
-
-.about-img img {
     width: 100%;
-    border-radius: 20px;
+    border-radius: 10px;
 }
 
 .about-content p {
@@ -436,6 +432,81 @@ label input:checked + .input__box-view .input__box-icon {
     color: var(--light-brown);
 }
 
+@media (min-width: 1600px) {
+    section {
+        padding: 8rem 0 4rem;
+    }
+    
+    .container {
+        max-width: 950px;
+        margin: 0 auto;
+        padding: 0 1.5rem;
+    }
+
+    body {
+        font-size: 140%;
+    }
+
+    .section-subtitle {
+        margin-bottom: 5rem;
+    }
+
+    .home-inner {
+        padding-top: 4rem; 
+    }
+
+    .home-content h1 {
+        font-size: 3rem;
+        font-weight: 500;
+        line-height: 2.8rem;
+    }
+
+    .home-content h3 {
+        font-size: 1.7rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+
+    .home-img, .skills-img{
+        width: 120%;
+    }
+
+    .about-inner img {
+        width: 120%;
+    }
+
+    .toggle i {
+        font-size: 1.6rem;
+    }
+
+    .social-media a {
+        font-size: 3rem;
+    }   
+
+    .header__container {
+        max-width: 1150px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 3rem 0;
+    }
+
+    .input__box-text {
+        font-size: 1.4rem;
+        font-weight: 400;
+        letter-spacing: 1px;
+    }
+
+    .portfolio-content img {
+        width: 500px;
+    }
+
+    .faq h4 {
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+}
+
 @media (max-width: 1024px) {
     .header {
         padding: 0 1rem;
@@ -474,10 +545,21 @@ label input:checked + .input__box-view .input__box-icon {
         left: 0;
         width: 100%;
         padding: 1rem 3%;
-        background: var(--bg-color);
+        background: var(--light-brown);
         border-top: .1rem solid rgb(182, 128, 105, .2);
         box-shadow: 0 .5rem 1rem rgb(182, 128, 105, .2);
         display: none;
+        font-size: 1.5rem;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+    color: var(--text-color);
+    font-weight: 600;
+    }
+
+    .navbar a {
+        color: #fff;
     }
 
     .navbar.active {
@@ -527,9 +609,6 @@ label input:checked + .input__box-view .input__box-icon {
 }
 
 @media (max-width: 740px) {
-    .about-img {
-        max-width: 300px;
-    }
 
     .faqs-container {
         grid-template-columns: 1fr;
@@ -548,14 +627,11 @@ label input:checked + .input__box-view .input__box-icon {
 
     .about-inner {
         gap: 2rem;
+        flex-direction: column;
     }
 }
 
 @media (max-width: 590px) {
-    .about-inner {
-        flex-direction: column;
-    }
-
     .portfolio-content {
         grid-template-columns: 1fr;
     }
@@ -603,4 +679,6 @@ label input:checked + .input__box-view .input__box-icon {
         width: 270px;
     }
 }
+
+
 

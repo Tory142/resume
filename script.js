@@ -54,14 +54,13 @@ window.onscroll = () => {
             });
         };
     });
-}
 
 // remove navbar when click navbar link
 
     menuIcon.classList.remove('bx-x');
     navbar.classList.remove('active');
 
-
+};
 // typed
 
 const typed = new Typed('.multiple-text', {

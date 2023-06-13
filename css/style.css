@@ -9,7 +9,7 @@
     outline: none;
     border: none;
     scroll-behavior: smooth;
-    transition: all .1s;
+    transition: .1s ease-in-out;
 }
 
 ::-webkit-scrollbar {
@@ -36,7 +36,6 @@
     --text-color: rgb(255, 243, 238);
     --bg-color: #382020;
     --light-brown: rgb(226, 172, 148);
-    
 }
 
 body {
@@ -230,7 +229,7 @@ a {
     pointer-events: none;
     user-select: none;
     transition: all .2s;
-    fill: #fff;
+    fill: var(--bg-color);
 }
 
 .input__box-view {
@@ -241,7 +240,7 @@ a {
     min-width: 20px;
     max-width: 20px;
     height: 20px;
-    background: #ffffff;
+    background: var(--bg-color);
     border: 3px solid var(--light-brown);
     border-radius: 4px;
     margin-right: 15px;
@@ -316,7 +315,7 @@ label input:checked + .input__box-view .input__box-icon {
     display: inline-flex;
     align-items: center;
     background-color: var(--light-brown);
-    color: #fff;
+    color: var(--bg-color);
     padding: 1rem;
     border-radius: 0.5rem;
     font-weight: 500;
@@ -361,7 +360,7 @@ label input:checked + .input__box-view .input__box-icon {
     height: fit-content;
     background: var(--light-brown);
     border-radius: 10px;
-    color: #fff;
+    color: var(--bg-color);
     cursor: pointer;
 }
 
@@ -422,7 +421,7 @@ label input:checked + .input__box-view .input__box-icon {
     justify-content: center;
     align-items: center;
     padding: .5rem;
-    background: #fff;
+    background: var(--bg-color);
     border-radius: .8rem;
     transition: .4s ease;
 }
@@ -554,16 +553,20 @@ label input:checked + .input__box-view .input__box-icon {
 
     .navbar a:hover,
     .navbar a.active {
-    color: var(--text-color);
-    font-weight: 600;
+        color: var(--text-color);
+        font-weight: 600;
     }
 
     .navbar a {
-        color: #fff;
+        color: var(--bg-color);
     }
 
     .navbar.active {
         display: block;
+    }
+
+    .body.active {
+        overflow: hidden;
     }
 
     .navbar a {

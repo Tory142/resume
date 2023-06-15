@@ -311,7 +311,7 @@ label input:checked + .input__box-view .input__box-icon {
     margin-bottom: 2rem;
 }
 
-.btn-portfolio {
+.btn {
     display: inline-flex;
     align-items: center;
     background-color: var(--light-brown);
@@ -321,22 +321,17 @@ label input:checked + .input__box-view .input__box-icon {
     font-weight: 500;
 }
 
-.btn-portfolio:hover {
+.btn:hover {
     background-color: var(--brown);
 }
 
-.btn-portfolio i {
+.btn i {
     font-size: 1.3rem;
     margin-left: .5rem;
 }
 
-.btn-portfolio:hover i{
+.btn:hover i{
     transform: translateX(0.25rem);
-}
-
-.swiper-btn i{
-    font-size: 4rem;
-    color: var(--light-brown);
 }
 
 .swiper-pagination-bullet {
